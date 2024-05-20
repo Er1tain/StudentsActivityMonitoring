@@ -6,9 +6,19 @@ import (
 )
 
 func main() {
+	http.HandleFunc("getListCategories/", handlers.GetListCategories)
 
-	http.HandleFunc("/post_handler", handlers.Post_handler)
+	http.HandleFunc("getListEvents/", handlers.GetListEvents)
+
+	http.HandleFunc("getListStudents/", handlers.GetListStudents)
+
+	http.HandleFunc("newCategory/", handlers.PostNewCategory)
+
+	http.HandleFunc("newEvent/", handlers.PostNewEvent)
+
+	http.HandleFunc("/DeleteEvent", handlers.DeleteEvent)
+
+	http.HandleFunc("/DeleteCategory", handlers.DeleteCategory)
 
 	http.ListenAndServe(":8080", nil)
-
 }
