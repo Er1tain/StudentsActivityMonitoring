@@ -1,6 +1,8 @@
 package Mocks
 
-import "EventsList/Models/Mocks/serialize_struct"
+import (
+	"EventsList/Models/Mocks/serialize_struct"
+)
 
 type Event = serialize_struct.Event
 type Student = serialize_struct.Student
@@ -42,4 +44,12 @@ func (database *DB) GetStudents(catigory string) []Student {
 	}
 
 	return list_student
+}
+
+func (database *DB) NewCatigory(data serialize_struct.Data_for_init_categories) bool {
+
+	//operations for add info in DB
+
+	return true
+
 }
