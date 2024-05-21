@@ -6,13 +6,13 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/getListCategories", handlers.GetListCategories)
+	http.HandleFunc("/getListCategories", handlers.GetListCategories) //
 
-	http.HandleFunc("/getListEvents", handlers.GetListEvents)
+	http.HandleFunc("/getListEvents", handlers.GetListEvents) //
 
-	http.HandleFunc("/getListStudents", handlers.GetListStudents)
+	http.HandleFunc("/getListStudents", handlers.GetListStudents) //
 
-	http.HandleFunc("/newCategory", handlers.PostNewCategory)
+	http.HandleFunc("/newCategory", handlers.PostNewCategory) //
 
 	http.HandleFunc("/newEvent", handlers.PostNewEvent)
 
